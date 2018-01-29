@@ -1,4 +1,6 @@
 ///scr_maze()
+randomize();
+
 var map, width, height;
 width = room_width / 32;
 height = room_height / 32;
