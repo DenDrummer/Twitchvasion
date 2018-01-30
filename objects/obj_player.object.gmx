@@ -164,23 +164,21 @@ while(spd &gt; 0)
     var vVel2 = lengthdir_y(spd, dir);
     if(!place_meeting(x+hVel2, y+vVel2, obj_wall))
     {
-        direction = dir;
-        speed = spd;
-        spd = 0;
         break;
     }
     else
     {
         spd -= 1;
-        if(spd &lt;= 0)
-        {
-            direction = dir;
-            speed = 0;
-            spd = 0;
-            break;
-        }
+    }
+    if(spd &lt;= 0)
+    {
+        spd = 0;
+        break;
     }
 }
+
+direction = dir;
+speed = spd;
 </string>
           </argument>
         </arguments>
