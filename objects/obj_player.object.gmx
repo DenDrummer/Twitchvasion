@@ -154,8 +154,33 @@ else
     }
 }
 
-direction = point_direction(x,y,x+hVel,y+vVel);
-speed = point_distance(x,y,x+hVel,y+vVel);
+var dir = point_direction(x,y,x+hVel,y+vVel);
+var spd = point_distance(x,y,x+hVel,y+vVel);
+
+//collision checks
+while(spd &gt; 0)
+{
+    var hVel2 = lengthdir_x(spd, dir);
+    var vVel2 = lengthdir_y(spd, dir);
+    if(!place_meeting(x+hVel2, y+vVel2, obj_wall))
+    {
+        direction = dir;
+        speed = spd;
+        spd = 0;
+        break;
+    }
+    else
+    {
+        spd -= 1;
+        if(spd &lt;= 0)
+        {
+            direction = dir;
+            speed = 0;
+            spd = 0;
+            break;
+        }
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -249,16 +274,16 @@ if(mouse_check_button_pressed(mb_left) &amp;&amp; reloading == false)
             <kind>1</kind>
             <string>if(score &lt; global.highScore)
 {
-    show_message("You died! you scored " + string(score) + " points.");
+    //show_message("You died! you scored " + string(score) + " points.");
 }
 else if (score == global.highScore)
 {
-    show_message("You died! you scored " + string(score) + " points and tied the high score!");
+    //show_message("You died! you scored " + string(score) + " points and tied the high score!");
 }
 else
 {
     global.highScore = score;
-    show_message("You died! you scored " + string(score) + " points and set a new high score!");
+    //show_message("You died! you scored " + string(score) + " points and set a new high score!");
 }
 room_restart();
 score = 0;

@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///variable defaults
+randomize();
 maxSpeed = random(1) - 0.5 + 6;
 maxHealth = round(random(5) + 4);
 health = maxHealth;
