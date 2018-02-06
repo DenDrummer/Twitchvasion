@@ -1,10 +1,14 @@
 ///scr_maze()
 randomize();
 
-var map, width, height;
-width = room_width / 32;
-height = room_height / 32;
-var airChance = 94;
+var map, width, height, gridsize;
+gridsize = 32;
+width = room_width / gridsize;
+height = room_height / gridsize;
+var wallChance = 10;
+var airChance = 100;
+var spawnChance = 0.2;
+var enemySpawnChance = 10;
 
 //generate maze
 for(var h = 0; h < height + 1; h++;)
@@ -18,7 +22,18 @@ for(var h = 0; h < height + 1; h++;)
         }
         else
         {
-            row[w] = random(airChance + 1);
+            row[w] = random(airChance + spawnChance + wallChance);
+            if(row[w] > airChance+wallChance)
+            {
+                if (random(enemySpawnChance + 1) < 1)
+                {
+                    instance_create(w * gridsize, h * gridsize, obj_playerSpawn);
+                }
+                else
+                {
+                    instance_create(w * gridsize, h * gridsize, obj_emoteSpawn);
+                }
+            }
         }
     }
     map[h] = row;

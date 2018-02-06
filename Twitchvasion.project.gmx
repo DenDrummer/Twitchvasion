@@ -74,6 +74,7 @@
     </sprites>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_cursorPressed</sprite>
+    <sprite>sprites\spr_emoteSpawn</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -154,6 +155,7 @@
       <object>objects\obj_wall_14</object>
       <object>objects\obj_wall_15</object>
     </objects>
+    <object>objects\obj_emoteSpawn</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>

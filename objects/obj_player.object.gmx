@@ -162,6 +162,8 @@ while(spd &gt; 0)
 {
     var hVel2 = lengthdir_x(spd, dir);
     var vVel2 = lengthdir_y(spd, dir);
+    hVel = hVel2;
+    vVel = vVel2;
     if(!place_meeting(x+hVel2, y+vVel2, obj_wall))
     {
         break;
