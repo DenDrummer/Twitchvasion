@@ -151,11 +151,36 @@ ds_list_add(T3,
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///create T4 emote list
+T4 = ds_list_create();
+ds_list_add(T4,
+    obj_dunpieGSif);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///create tier weights
-t1w = 3;
-t2w = 2;
-t3w = 1;
-totalWeight = t1w + t2w + t3w;
+t1w = 4
+t2w = 3;
+t3w = 2;
+t4w = 1;
+totalWeight = t1w + t2w + t3w + t4w;
 </string>
           </argument>
         </arguments>
@@ -241,6 +266,7 @@ if(!variable_global_exists("highScore"))
 ds_list_destroy(T1);
 ds_list_destroy(T2);
 ds_list_destroy(T3);
+ds_list_destroy(T4);
 </string>
           </argument>
         </arguments>
@@ -318,9 +344,13 @@ if(random(clamp(5 - score / 1000, 1, 5)) &lt; 1)
     {
         tier = 2;
     }
-    else
+    else if (rand &lt; t1w + t2w + t3w)
     {
         tier = 3;
+    }
+    else
+    {
+        tier = 4;
     }
     
     //choose which enemy spawns
@@ -338,6 +368,10 @@ if(random(clamp(5 - score / 1000, 1, 5)) &lt; 1)
         case 3:
             var emote = floor(random(ds_list_size(T3)));
             obj = ds_list_find_value(T3, emote)
+            break;
+        case 4:
+            var emote = floor(random(ds_list_size(T4)));
+            obj = ds_list_find_value(T4, emote)
             break;
     }
     
@@ -422,7 +456,61 @@ if (keyboard_check(vk_escape))
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///destroy grid
+ds_grid_destroy(global.grid);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///reset maze
+
+//destroy previous maze
+while(instance_exists(obj_wall))
+{
+    instance_destroy(instance_find(obj_wall, 0));
+}
+
+//create new maze
+scr_createMaze();
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -451,36 +539,6 @@ else
     player.x = room_width / 2;
     player.y = room_height / 2;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///reset maze
-
-//destroy previous maze
-while(instance_exists(obj_wall))
-{
-    instance_destroy(instance_find(obj_wall, 0));
-}
-
-//create new maze
-scr_maze();
 </string>
           </argument>
         </arguments>

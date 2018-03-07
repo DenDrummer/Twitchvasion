@@ -1,14 +1,13 @@
 ///scr_maze()
 randomize();
 
-var map, width, height, gridsize;
-gridsize = 32;
-width = room_width / gridsize;
-height = room_height / gridsize;
-var wallChance = 10;
-var airChance = 100;
-var spawnChance = 0.2;
-var enemySpawnChance = 10;
+var map, width, height;
+width = room_width / CELL_SIZE;
+height = room_height / CELL_SIZE;
+
+//create the grid
+global.grid = ds_grid_create(width, height);
+ds_grid_set_region(global.grid, 0, 0, width-1, height-1, VOID);
 
 //generate maze
 for(var h = 0; h < height + 1; h++;)
@@ -22,22 +21,21 @@ for(var h = 0; h < height + 1; h++;)
         }
         else
         {
-            row[w] = random(airChance + spawnChance + wallChance);
-            if(row[w] > airChance+wallChance)
+            row[w] = random(AIR_CHANCE + SPAWN_CHANCE + WALL_CHANCE);
+            if(row[w] > AIR_CHANCE + WALL_CHANCE)
             {
-                if (random(enemySpawnChance + 1) < 1)
-                {
-                    instance_create(w * gridsize, h * gridsize, obj_playerSpawn);
-                }
-                else
-                {
-                    instance_create(w * gridsize, h * gridsize, obj_emoteSpawn);
-                }
+                
+                instance_create(w * CELL_SIZE, h * CELL_SIZE, obj_emoteSpawn);
             }
         }
     }
     map[h] = row;
 }
+
+//select random spawner to use as player spawner
+var spawner = instance_find(obj_emoteSpawn,floor(random(instance_number(obj_emoteSpawn))));
+instance_create(spawner.x,spawner.y,obj_playerSpawn);
+instance_destroy(spawner);
 
 //spawn maze
 for(var h = 0; h < height; h++)

@@ -28,7 +28,7 @@
             <string>///variable defaults
 randomize();
 maxSpeed = random(1) - 0.5 + 6;
-maxHealth = round(random(5) + 4);
+maxHealth = irandom(8) + 6;
 health = maxHealth;
 </string>
           </argument>
