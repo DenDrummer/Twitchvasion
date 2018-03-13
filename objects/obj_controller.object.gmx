@@ -48,29 +48,29 @@ alarm[0] = clamp(room_speed / 2 - score/100, 1, room_speed / 2);
           <argument>
             <kind>1</kind>
             <string>///create T1 emote list
-T1 = ds_list_create();
-ds_list_add(T1,
-    obj_BabyRage,
-    obj_BegWan,
-    obj_BibleThump,
-    obj_BloodTrail,
-    obj_cmonBruh,
-    obj_copyThis,
-    obj_CurseLit,
-    obj_DansGame,
-    obj_DarkMode,
-    obj_FailFish,
-    obj_GivePLZ,
-    obj_HeyGuys,
-    obj_imGlitch,
-    obj_Kappa,
-    obj_KappaPride,
-    obj_Keepo,
-    obj_Kreygasm,
-    obj_LUL,
-    obj_pastaThat,
-    obj_PJSalt,
-    obj_PogChamp);
+global.T1 = ds_list_create();
+ds_list_add(global.T1,
+    spr_BabyRage,
+    spr_BegWan,
+    spr_BibleThump,
+    spr_BloodTrail,
+    spr_cmonBruh,
+    spr_copyThis,
+    spr_CurseLit,
+    spr_DansGame,
+    spr_DarkMode,
+    spr_FailFish,
+    spr_GivePLZ,
+    spr_HeyGuys,
+    spr_imGlitch,
+    spr_Kappa,
+    spr_KappaPride,
+    spr_Keepo,
+    spr_Kreygasm,
+    spr_LUL,
+    spr_pastaThat,
+    spr_PJSalt,
+    spr_PogChamp);
 </string>
           </argument>
         </arguments>
@@ -92,21 +92,41 @@ ds_list_add(T1,
           <argument>
             <kind>1</kind>
             <string>///create T2 emote list
-T2 = ds_list_create();
-ds_list_add(T2,
-    obj_dunpieSif,
-    obj_iflynnFEELS,
-    obj_iflynnGASM,
-    obj_iflynnHI,
-    obj_iflynnLOVE,
-    obj_iflynnLUCK,
-    obj_iflynnLUL,
-    obj_iflynnLURK,
-    obj_n3boysHorns,
-    obj_shulDab,
-    obj_shulLewd,
-    obj_shulLove,
-    obj_shulSalt);
+global.T2 = ds_list_create();
+ds_list_add(global.T2,
+    //Dunpield
+    spr_dunpieSif,
+    //iFlynn
+    spr_iflynnFEELS,
+    spr_iflynnGASM,
+    spr_iflynnHI,
+    spr_iflynnLOVE,
+    spr_iflynnLUCK,
+    spr_iflynnLUL,
+    spr_iflynnLURK,
+    //LadyZoe
+    spr_ladyz0Yes,
+    //N3BoySha
+    spr_n3boysHorns,
+    //sasoriox
+    spr_sasori2Kappaccino,
+    //Shul
+    spr_shulCry,
+    spr_shulDab,
+    spr_shulHey,
+    spr_shulLewd,
+    spr_shulLove,
+    spr_shulLUL,
+    spr_shulLurk,
+    spr_shulRage,
+    spr_shulS,
+    spr_shulSalt,
+    spr_shulThink,
+    spr_shulUp,
+    //SwissCheesy_ez
+    spr_swisscVoltLUL,
+    //Tygastripe
+    spr_tygastHEY);
 </string>
           </argument>
         </arguments>
@@ -128,9 +148,12 @@ ds_list_add(T2,
           <argument>
             <kind>1</kind>
             <string>///create T3 emote list
-T3 = ds_list_create();
-ds_list_add(T3,
-    obj_dunpieOmg);
+global.T3 = ds_list_create();
+ds_list_add(global.T3,
+    //Dunpield
+    spr_dunpieOmg,
+    //leijonaervasti
+    spr_leijonNook);
 </string>
           </argument>
         </arguments>
@@ -152,9 +175,10 @@ ds_list_add(T3,
           <argument>
             <kind>1</kind>
             <string>///create T4 emote list
-T4 = ds_list_create();
-ds_list_add(T4,
-    obj_dunpieGSif);
+global.T4 = ds_list_create();
+ds_list_add(global.T4,
+    //Dunpield
+    spr_dunpieGsif);
 </string>
           </argument>
         </arguments>
@@ -263,10 +287,10 @@ if(!variable_global_exists("highScore"))
           <argument>
             <kind>1</kind>
             <string>///destroy lists
-ds_list_destroy(T1);
-ds_list_destroy(T2);
-ds_list_destroy(T3);
-ds_list_destroy(T4);
+ds_list_destroy(global.T1);
+ds_list_destroy(global.T2);
+ds_list_destroy(global.T3);
+ds_list_destroy(global.T4);
 </string>
           </argument>
         </arguments>
@@ -335,44 +359,22 @@ if(random(clamp(5 - score / 1000, 1, 5)) &lt; 1)
     
     //choose which tier of enemy spawns
     var rand = random(totalWeight);
-    var tier;
+    var obj;
     if(rand &lt; t1w)
     {
-        tier = 1;
+        obj = obj_enemy1;
     }
     else if (rand &lt; t1w + t2w)
     {
-        tier = 2;
+        obj = obj_enemy2;
     }
     else if (rand &lt; t1w + t2w + t3w)
     {
-        tier = 3;
+        obj = obj_enemy3;
     }
     else
     {
-        tier = 4;
-    }
-    
-    //choose which enemy spawns
-    var obj;
-    switch(tier)
-    {
-        case 1:
-            var emote = floor(random(ds_list_size(T1)));
-            obj = ds_list_find_value(T1, emote)
-            break;
-        case 2:
-            var emote = floor(random(ds_list_size(T2)));
-            obj = ds_list_find_value(T2, emote)
-            break;
-        case 3:
-            var emote = floor(random(ds_list_size(T3)));
-            obj = ds_list_find_value(T3, emote)
-            break;
-        case 4:
-            var emote = floor(random(ds_list_size(T4)));
-            obj = ds_list_find_value(T4, emote)
-            break;
+        obj = obj_enemy4;
     }
     
     //spawn it
@@ -427,7 +429,8 @@ if (keyboard_check(vk_escape))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>cursor_sprite = spr_cursor;
+            <string>///change to released cursor
+cursor_sprite = spr_cursor;
 </string>
           </argument>
         </arguments>
@@ -450,7 +453,8 @@ if (keyboard_check(vk_escape))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>cursor_sprite = spr_cursorPressed;
+            <string>///change to pressed cursor
+cursor_sprite = spr_cursorPressed;
 </string>
           </argument>
         </arguments>

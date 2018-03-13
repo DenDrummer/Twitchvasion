@@ -21,9 +21,9 @@ for(var i = 0; i <= h; i++)
     }
 }
 
-repeat(GRID_SMOOTHNESS)
-{
+//repeat(GRID_SMOOTHNESS)
+//{
     scr_grid_smooth(w, h);
-}
+//}
 
 scr_buildMaze();

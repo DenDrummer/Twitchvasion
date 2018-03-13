@@ -40,7 +40,7 @@ outsideRoom = 0;
 
 //shooting
 bulletSpeed = 22;
-reloadTime = room_speed * (0 + 15 / 60);
+reloadTime = room_speed * (0 + 12 / 60);
 reloading = false;
 </string>
           </argument>

@@ -9,16 +9,17 @@ for (var i = 0; i <= h+1; i++)
         var wt = scr_getWallType(j,i,w,h);
         
         //assign wall object to spawn
-        var wall = scr_getWallObj(wt);
+        var wall = scr_getWallSpr(wt);
         
         //spawn tile
         var spawnX=j*CELL_SIZE-CELL_SIZE/2;
         if(wt != 0)
         {
-            with(instance_create(spawnX, spawnY, wall))
+            with(instance_create(spawnX, spawnY, obj_wall))
             {
-                image_xscale = CELL_SIZE/16;
-                image_yscale = CELL_SIZE/16;
+                sprite_index = wall;
+                image_xscale = CELL_SIZE/sprite_width;
+                image_yscale = CELL_SIZE/sprite_height;
             }
             show_debug_message("wall "
                                + string(wt)

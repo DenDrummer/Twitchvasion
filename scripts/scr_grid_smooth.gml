@@ -1,27 +1,33 @@
 ///scr_grid_smooth(width, height)
-var w = argument0, h = argument1;
-var newMap = ds_grid_create(w,h);
-for (var i = 0; i < h; i++)
+var w = argument0, h = argument1, done = false;
+while(done == false)
 {
-    for (var j = 0; j < w; j++)
+    var newMap = ds_grid_create(w,h);
+    for (var i = 0; i < h; i++)
     {
-        //nwt: nearby wall tiles
-        var nwt = scr_getSurrWalls(j,i,h,w);
-        if (nwt > SMOOTH_CREATE)
+        for (var j = 0; j < w; j++)
         {
-            newMap[# j,i] = 1;
-        }
-        else if (nwt < SMOOTH_DESTROY)
-        {
-            newMap[# j,i] = 0;
-        }
-        else
-        {
-            newMap[# j,i] = global.grid[# j,i];
+            //nwt: nearby wall tiles
+            var nwt = scr_getSurrWalls(j,i,h,w);
+            if (nwt > SMOOTH_CREATE)
+            {
+                newMap[# j,i] = 1;
+            }
+            else if (nwt < SMOOTH_DESTROY)
+            {
+                newMap[# j,i] = 0;
+            }
+            else
+            {
+                newMap[# j,i] = global.grid[# j,i];
+            }
         }
     }
+    if(ds_grid_write(newMap) == ds_grid_write(global.grid))
+    {
+        done = true;
+    }
+    
+    ds_grid_copy(global.grid, newMap);
+    ds_grid_destroy(newMap);
 }
-
-ds_grid_copy(global.grid, newMap);
-
-ds_grid_destroy(newMap);
