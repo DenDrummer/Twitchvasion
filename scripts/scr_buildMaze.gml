@@ -21,12 +21,6 @@ for (var i = 0; i <= h+1; i++)
                 image_xscale = CELL_SIZE/sprite_width;
                 image_yscale = CELL_SIZE/sprite_height;
             }
-            show_debug_message("wall "
-                               + string(wt)
-                               + "spawned at x:"
-                               + string(spawnX)
-                               + "y:"
-                               + string(spawnY));
         }
         else
         {

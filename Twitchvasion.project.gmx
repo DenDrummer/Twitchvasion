@@ -49,6 +49,7 @@
       </sprites>
       <sprites name="leijonaervasti">
         <sprite>sprites\spr_leijonNook</sprite>
+        <sprite>sprites\spr_leijonPango</sprite>
       </sprites>
       <sprites name="N3BoySha">
         <sprite>sprites\spr_n3boysHorns</sprite>
@@ -104,13 +105,18 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_maze.gml</script>
     <script>scripts\scr_createMaze.gml</script>
     <script>scripts\scr_grid_smooth.gml</script>
     <script>scripts\scr_getSurrWalls.gml</script>
     <script>scripts\scr_buildMaze.gml</script>
     <script>scripts\scr_getWallType.gml</script>
     <script>scripts\scr_getWallSpr.gml</script>
+    <scripts name="emote lists">
+      <script>scripts\scr_tier1.gml</script>
+      <script>scripts\scr_tier2.gml</script>
+      <script>scripts\scr_tier3.gml</script>
+      <script>scripts\scr_tier4.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_score</font>
@@ -129,21 +135,6 @@
     </objects>
     <objects name="walls">
       <object>objects\obj_wall</object>
-      <object>objects\obj_wall_01</object>
-      <object>objects\obj_wall_02</object>
-      <object>objects\obj_wall_03</object>
-      <object>objects\obj_wall_04</object>
-      <object>objects\obj_wall_05</object>
-      <object>objects\obj_wall_06</object>
-      <object>objects\obj_wall_07</object>
-      <object>objects\obj_wall_08</object>
-      <object>objects\obj_wall_09</object>
-      <object>objects\obj_wall_10</object>
-      <object>objects\obj_wall_11</object>
-      <object>objects\obj_wall_12</object>
-      <object>objects\obj_wall_13</object>
-      <object>objects\obj_wall_14</object>
-      <object>objects\obj_wall_15</object>
     </objects>
     <object>objects\obj_emoteSpawn</object>
   </objects>
@@ -151,10 +142,10 @@
     <room>rooms\room1</room>
   </rooms>
   <constants number="11">
-    <constant name="CELL_SIZE">32</constant>
+    <constant name="CELL_SIZE">40</constant>
     <constant name="WALL_CHANCE">20</constant>
     <constant name="AIR_CHANCE">100</constant>
-    <constant name="SPAWN_CHANCE">0.25</constant>
+    <constant name="SPAWN_CHANCE">0.2</constant>
     <constant name="VOID">-7</constant>
     <constant name="GRID_FILL">34</constant>
     <constant name="GRID_SMOOTHNESS">10</constant>

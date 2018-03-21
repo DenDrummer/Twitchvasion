@@ -47,138 +47,11 @@ alarm[0] = clamp(room_speed / 2 - score/100, 1, room_speed / 2);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///create T1 emote list
-global.T1 = ds_list_create();
-ds_list_add(global.T1,
-    spr_BabyRage,
-    spr_BegWan,
-    spr_BibleThump,
-    spr_BloodTrail,
-    spr_cmonBruh,
-    spr_copyThis,
-    spr_CurseLit,
-    spr_DansGame,
-    spr_DarkMode,
-    spr_FailFish,
-    spr_GivePLZ,
-    spr_HeyGuys,
-    spr_imGlitch,
-    spr_Kappa,
-    spr_KappaPride,
-    spr_Keepo,
-    spr_Kreygasm,
-    spr_LUL,
-    spr_pastaThat,
-    spr_PJSalt,
-    spr_PogChamp);
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///create T2 emote list
-global.T2 = ds_list_create();
-ds_list_add(global.T2,
-    //Dunpield
-    spr_dunpieSif,
-    //iFlynn
-    spr_iflynnFEELS,
-    spr_iflynnGASM,
-    spr_iflynnHI,
-    spr_iflynnLOVE,
-    spr_iflynnLUCK,
-    spr_iflynnLUL,
-    spr_iflynnLURK,
-    //LadyZoe
-    spr_ladyz0Yes,
-    //N3BoySha
-    spr_n3boysHorns,
-    //sasoriox
-    spr_sasori2Kappaccino,
-    //Shul
-    spr_shulCry,
-    spr_shulDab,
-    spr_shulHey,
-    spr_shulLewd,
-    spr_shulLove,
-    spr_shulLUL,
-    spr_shulLurk,
-    spr_shulRage,
-    spr_shulS,
-    spr_shulSalt,
-    spr_shulThink,
-    spr_shulUp,
-    //SwissCheesy_ez
-    spr_swisscVoltLUL,
-    //Tygastripe
-    spr_tygastHEY);
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///create T3 emote list
-global.T3 = ds_list_create();
-ds_list_add(global.T3,
-    //Dunpield
-    spr_dunpieOmg,
-    //leijonaervasti
-    spr_leijonNook);
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///create T4 emote list
-global.T4 = ds_list_create();
-ds_list_add(global.T4,
-    //Dunpield
-    spr_dunpieGsif);
+            <string>///create emote lists
+scr_tier1();
+scr_tier2();
+scr_tier3();
+scr_tier4();
 </string>
           </argument>
         </arguments>
@@ -225,19 +98,14 @@ totalWeight = t1w + t2w + t3w + t4w;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///spawn player and set cursor sprite
-cursor_sprite = spr_cursor;
-var spawn = obj_playerSpawn;
-if(!instance_exists(obj_player))
+            <string>///create global variables if they don't exist yet
+if(!variable_global_exists("highScore"))
 {
-    if(instance_exists(spawn))
-    {
-        var spawner = instance_find(spawn, instance_number(spawn));
-    }
-    else
-    {
-        player = instance_create(room_width/2, room_height/2, obj_player);
-    }
+    global.highScore = 0;
+}
+if(!variable_global_exists("highScore"))
+{
+    global.highScore = 0;
 }
 </string>
           </argument>
@@ -259,10 +127,19 @@ if(!instance_exists(obj_player))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///create highscore variable if it doesn't exist yet
-if(!variable_global_exists("highScore"))
+            <string>///spawn player and set cursor sprite
+cursor_sprite = spr_cursor;
+var spawn = obj_playerSpawn;
+if(!instance_exists(obj_player))
 {
-    global.highScore = 0;
+    if(instance_exists(spawn))
+    {
+        var spawner = instance_find(spawn, instance_number(spawn));
+    }
+    else
+    {
+        player = instance_create(room_width/2, room_height/2, obj_player);
+    }
 }
 </string>
           </argument>

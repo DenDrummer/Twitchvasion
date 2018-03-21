@@ -40,7 +40,9 @@ outsideRoom = 0;
 
 //shooting
 bulletSpeed = 22;
-reloadTime = room_speed * (0 + 12 / 60);
+reloadTime = clamp(room_speed * (35 / 60) - (global.highScore / 10),
+                   room_speed * ( 5 / 60),
+                   room_speed * (35 / 60));
 reloading = false;
 </string>
           </argument>
