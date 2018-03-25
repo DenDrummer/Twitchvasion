@@ -40,7 +40,7 @@ outsideRoom = 0;
 
 //shooting
 bulletSpeed = 22;
-reloadTime = clamp(room_speed * (35 / 60) - (global.highScore / 10),
+reloadTime = clamp(room_speed * (35 / 60) - (global.highScore / 100),
                    room_speed * ( 5 / 60),
                    room_speed * (35 / 60));
 reloading = false;
@@ -203,19 +203,23 @@ speed = spd;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///check if outside room
-if(x&lt;0 || x&gt;room_width || y&lt;0 || y&gt;room_height)
+            <string>///wrap around room
+if(x&lt;0)
 {
-    outsideRoom += 1;
-    if(outsideRoom&gt;room_speed)
-    {
-        x = room_height / 2;
-        y = room_width  / 2;
-    }
+    x += room_width;
 }
-else
+else if(x &gt; room_width)
 {
-    outsideRoom = 0;
+    x -= room_width;
+}
+
+if(y &lt; 0)
+{
+    y += room_height;
+}
+else if(y &gt; room_height)
+{
+    y -= room_height;
 }
 </string>
           </argument>
@@ -256,6 +260,34 @@ if(mouse_check_button_pressed(mb_left) &amp;&amp; reloading == false)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///cheats
+if(CHEATS)
+{
+    if(keyboard_check_pressed(ord('S')))
+    {
+        score += 100;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="4" ename="obj_enemy">
       <action>
@@ -274,7 +306,8 @@ if(mouse_check_button_pressed(mb_left) &amp;&amp; reloading == false)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(score &lt; global.highScore)
+            <string>///update highscore &amp; reset score
+if(score &lt; global.highScore)
 {
     //show_message("You died! you scored " + string(score) + " points.");
 }

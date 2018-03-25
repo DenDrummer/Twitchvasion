@@ -1,7 +1,7 @@
 ///scr_createMaze()
 randomize();
-w = room_width / CELL_SIZE;
-h = room_height / CELL_SIZE;
+w = (room_width div CELL_SIZE);
+h = (room_height div CELL_SIZE) + 1;
 
 global.grid = ds_grid_create(w, h);
 
@@ -10,7 +10,7 @@ for(var i = 0; i <= h; i++)
     for(var j = 0; j <= w; j++)
     {
         var r = irandom(AIR_CHANCE + GRID_FILL);
-        if(r < GRID_FILL || i == 0 || j == 0 || i == h || j == w)
+        if(r < GRID_FILL)
         {
             global.grid[# j, i] = 1;  //create wall
         }
@@ -21,9 +21,6 @@ for(var i = 0; i <= h; i++)
     }
 }
 
-//repeat(GRID_SMOOTHNESS)
-//{
-    scr_grid_smooth(w, h);
-//}
+scr_grid_smooth(w, h);
 
 scr_buildMaze();

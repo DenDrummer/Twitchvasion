@@ -133,16 +133,14 @@
       <object>objects\obj_enemy3</object>
       <object>objects\obj_enemy4</object>
     </objects>
-    <objects name="walls">
-      <object>objects\obj_wall</object>
-    </objects>
+    <object>objects\obj_wall</object>
     <object>objects\obj_emoteSpawn</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
   </rooms>
-  <constants number="11">
-    <constant name="CELL_SIZE">40</constant>
+  <constants number="12">
+    <constant name="CELL_SIZE">32</constant>
     <constant name="WALL_CHANCE">20</constant>
     <constant name="AIR_CHANCE">100</constant>
     <constant name="SPAWN_CHANCE">0.2</constant>
@@ -153,6 +151,7 @@
     <constant name="SMOOTH_DESTROY">4</constant>
     <constant name="SMOOTH_CREATE">4</constant>
     <constant name="SMOOTH_RANGE">1</constant>
+    <constant name="CHEATS">false</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

@@ -47,4 +47,7 @@ switch(wt)
     case 15:
          return spr_wall_15;
          break;
+    default:
+         //error;
+         break;
 }
