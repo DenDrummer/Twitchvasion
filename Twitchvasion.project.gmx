@@ -105,17 +105,23 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_createMaze.gml</script>
-    <script>scripts\scr_grid_smooth.gml</script>
-    <script>scripts\scr_getSurrWalls.gml</script>
-    <script>scripts\scr_buildMaze.gml</script>
-    <script>scripts\scr_getWallType.gml</script>
-    <script>scripts\scr_getWallSpr.gml</script>
     <scripts name="emote lists">
       <script>scripts\scr_tier1.gml</script>
       <script>scripts\scr_tier2.gml</script>
       <script>scripts\scr_tier3.gml</script>
       <script>scripts\scr_tier4.gml</script>
+    </scripts>
+    <scripts name="maze">
+      <script>scripts\scr_createMaze.gml</script>
+      <script>scripts\scr_grid_smooth.gml</script>
+      <script>scripts\scr_getSurrWalls.gml</script>
+      <script>scripts\scr_buildMaze.gml</script>
+      <script>scripts\scr_getWallType.gml</script>
+      <script>scripts\scr_getWallSpr.gml</script>
+    </scripts>
+    <scripts name="INI">
+      <script>scripts\scr_ini_save.gml</script>
+      <script>scripts\scr_ini_load.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -140,7 +146,7 @@
   <rooms name="rooms">
     <room>rooms\room1</room>
   </rooms>
-  <constants number="12">
+  <constants number="17">
     <constant name="CELL_SIZE">32</constant>
     <constant name="WALL_CHANCE">20</constant>
     <constant name="AIR_CHANCE">100</constant>
@@ -153,6 +159,11 @@
     <constant name="SMOOTH_CREATE">4</constant>
     <constant name="SMOOTH_RANGE">1</constant>
     <constant name="CHEATS">false</constant>
+    <constant name="PATH_MAXROT">32</constant>
+    <constant name="PATH_ROTSTEP">8</constant>
+    <constant name="PATH_AHEAD">10</constant>
+    <constant name="PATH_ONSPOT">true</constant>
+    <constant name="VERSION">"V0.1.1"</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
