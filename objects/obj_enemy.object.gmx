@@ -5,9 +5,86 @@
   <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_obstacle</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///trigger the pathfinding alarm
+//alarm[1] = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///update path
+if(instance_exists(obj_player))
+{
+    var player = instance_nearest(x, y, obj_player);
+    if(mp_linear_path_object(myPath, player.x, player.y, maxSpeed, obj_obstacle))
+    {
+        //path_start(pth_
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///trigger the pathfinding alarm
+alarm[1] = room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,7 +102,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(h &lt; maxHealth)
+            <string>///heal if not max health
+if(h &lt; maxHealth)
 {
     h += 1;
     if(h &gt; maxHealth)
@@ -56,23 +134,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(obj_player))
+            <string>///go towards player
+if(instance_exists(obj_player))
 {
     var player = instance_nearest(x, y, obj_player)
-    direction = point_direction(x, y, player.x, player.y)
-    var distance = point_distance(x, y, player.x, player.y)
-    if(distance &gt; maxSpeed)
-    {
-        speed = maxSpeed;
-    }
-    else
-    {
-        speed = distance;
-    }
-}
-else
-{
-    speed = 0;
+    mp_linear_step_object(player.x, player.y, maxSpeed, obj_obstacle);
 }
 </string>
           </argument>

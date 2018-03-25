@@ -135,6 +135,7 @@
     </objects>
     <object>objects\obj_wall</object>
     <object>objects\obj_emoteSpawn</object>
+    <object>objects\obj_obstacle</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
