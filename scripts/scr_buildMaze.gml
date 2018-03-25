@@ -1,9 +1,9 @@
 ///scr_buildMaze()
 var w = room_width / CELL_SIZE, h = room_height / CELL_SIZE;
-for (var i = 0; i <= h+1; i++)
+for (var i = 0; i <= h; i++)
 {
     var spawnY=i*CELL_SIZE-CELL_SIZE/2
-    for (var j = 0; j <= w+1; j++)
+    for (var j = 0; j <= w; j++)
     {
         //choose wall type
         var wt = scr_getWallType(j,i,w,h);
