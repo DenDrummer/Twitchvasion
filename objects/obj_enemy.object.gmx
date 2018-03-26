@@ -194,9 +194,9 @@ if(h &lt;=0)
     instance_destroy(self);
     with(instance_create(x, y, obj_bit))
     {
-        worth = maxHealth;
+        worth = other.maxHealth;
         direction = other.direction;
-        speed = other.direction;
+        speed = clamp(other.speed, 1, 20);
     }
 }
 else

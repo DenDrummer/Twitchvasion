@@ -25,27 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///choose bit image based on worth
-if(worth &gt;= 10000)
-{
-    sprite_index = spr_bit10000;
-}
-else if(worth &gt;= 5000)
-{
-    sprite_index = spr_bit5000;
-}
-else if(worth &gt;= 1000)
-{
-    sprite_index = spr_bit1000;
-}
-else if(worth &gt;= 100)
-{
-    sprite_index = spr_bit100;
-}
-else
-{
-    sprite_index = spr_bit1;
-}
+            <string>///create vars
+worth = 0;
+combining = false;
 </string>
           </argument>
         </arguments>
@@ -119,8 +101,6 @@ if(speed &gt; 1)
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="4" ename="obj_bit">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -137,15 +117,29 @@ if(speed &gt; 1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///combine both bits
-var newWorth = self.worth + other.worth;
-var newX = (self.x + other.x) / 2;
-var newY = (self.y + other.y) / 2;
-instance_destroy(self);
-instance_destroy(other);
-with(instance_create(newX, newY, obj_bit))
+            <string>///gravitate towards player or other bit
+if(instance_exists(obj_player))
 {
-    worth = newWorth;
+    var player = instance_nearest(x, y, obj_player);
+    if(point_distance(x, y, player.x, player.y) &lt;= BIT_RADIUS)
+    {
+        gravity = BIT_GRAVITY;
+        gravity_direction = point_direction(x, y, player.x, player.y);
+    }
+    else
+    {
+        var bit = instance_nearest(x, y, obj_bit)
+        if(self != bit &amp;&amp; point_distance(x, y, bit.x, bit.y) &lt; BIT_RADIUS)
+        {
+            gravity = BIT_GRAVITY;
+            gravity_direction = point_direction(x, y, bit.x, bit.y);
+        }
+        gravity = 0;
+    }
+}
+else
+{
+    gravity = 0;
 }
 </string>
           </argument>
@@ -174,6 +168,116 @@ with(instance_create(newX, newY, obj_bit))
           <argument>
             <kind>4</kind>
             <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bit">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///combine both bits
+if(other.combining == false &amp;&amp; self.combining == true)
+{
+    worth  = self.worth + other.worth;
+    x      = (self.x * self.worth +
+              other.x * other.worth) /
+             (self.worth + other.worth);
+    y      = (self.y * self.worth +
+              other.y * other.worth) /
+             (self.worth + other.worth);
+    hspeed = (self.hspeed * self.worth +
+              other.hspeed * other.worth) /
+             (self.worth + other.worth);
+    vspeed = (self.vspeed * self.worth +
+              other.vspeed * other.worth) /
+             (self.worth + other.worth);
+    instance_destroy(other);
+    combining = false;
+}
+else if(other.combining == false)
+{
+    combining = true;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///choose bit image based on worth
+if(worth &gt;= 10000)
+{
+    sprite_index = spr_bit10000;
+}
+else if(worth &gt;= 5000)
+{
+    sprite_index = spr_bit5000;
+}
+else if(worth &gt;= 1000)
+{
+    sprite_index = spr_bit1000;
+}
+else if(worth &gt;= 100)
+{
+    sprite_index = spr_bit100;
+}
+else
+{
+    sprite_index = spr_bit1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///draw self
+draw_self();
+</string>
           </argument>
         </arguments>
       </action>

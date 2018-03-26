@@ -71,8 +71,7 @@ reloading = false;
 if(mouse_check_button(mb_left))
 {
     var bulletDirection = point_direction(x,y,mouse_x,mouse_y);
-    var bullet = instance_create(x,y,obj_bullet);
-    with(bullet)
+    with(instance_create(x,y,obj_bullet))
     {
         direction = bulletDirection;
         speed = other.bulletSpeed;
@@ -80,6 +79,7 @@ if(mouse_check_button(mb_left))
         hspeed += other.hspeed;
         vspeed += other.vspeed;
     }
+    audio_play_sound(snd_pistol, 1, false);
     reloading = true;
     alarm[0] = reloadTime;
 }
@@ -253,6 +253,7 @@ if(mouse_check_button_pressed(mb_left) &amp;&amp; reloading == false)
         hspeed += other.hspeed / 2;
         vspeed += other.vspeed / 2;
     }
+    audio_play_sound(snd_pistol, 1, false);
     reloading = true;
     alarm[0] = reloadTime;
 }
