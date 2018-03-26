@@ -25,6 +25,35 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///create global variables if they don't exist yet
+if(!variable_global_exists("highScore"))
+{
+    global.highScore = 0;
+}
+if(!variable_global_exists("bits"))
+{
+    global.bits = 0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///start spawntimer
 alarm[0] = clamp(room_speed / 2 - score/100, 1, room_speed / 2);
 </string>
@@ -78,35 +107,6 @@ t2w = 3;
 t3w = 2;
 t4w = 1;
 totalWeight = t1w + t2w + t3w + t4w;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///create global variables if they don't exist yet
-if(!variable_global_exists("highScore"))
-{
-    global.highScore = 0;
-}
-if(!variable_global_exists("bits"))
-{
-    global.bits = 0;
-}
 </string>
           </argument>
         </arguments>
@@ -197,7 +197,7 @@ alarm[0] = clamp(room_speed / 2 - score/100, 1, room_speed / 2)
 
 randomize();
 //whether or not an enemy spawns
-if(random(clamp(5 - score / 1000, 1, 5)) &lt; 1)
+if(random(clamp(5 - score / 1000, 1, 5)) &lt; 1 &amp;&amp; instance_number(obj_enemy) &lt; MAX_ENEMY)
 {
     //if no enemy spawnpoint exists
     if (!instance_exists(obj_emoteSpawn))
@@ -283,6 +283,41 @@ if(random(clamp(5 - score / 1000, 1, 5)) &lt; 1)
 if (keyboard_check(vk_escape))
 {
     game_end();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///cheats
+if(CHEATS)
+{
+    //raise score
+    if(keyboard_check_pressed(ord('S')))
+    {
+        score += 100;
+    }
+    
+    //clear high score
+    if(keyboard_check_pressed(ord('C')))
+    {
+        global.highScore = 0;
+    }
 }
 </string>
           </argument>
@@ -468,6 +503,35 @@ scr_ini_save();
             <kind>1</kind>
             <string>///load INI file
 scr_ini_load();
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///create global variables if they don't exist yet
+if(!variable_global_exists("highScore"))
+{
+    global.highScore = 0;
+}
+if(!variable_global_exists("bits"))
+{
+    global.bits = 0;
+}
 </string>
           </argument>
         </arguments>

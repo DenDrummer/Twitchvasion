@@ -6,101 +6,110 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprites name="Twitchmotes">
-      <sprites name="Dunpield">
-        <sprite>sprites\spr_dunpieOmg</sprite>
-        <sprite>sprites\spr_dunpieSif</sprite>
-        <sprite>sprites\spr_dunpieGsif</sprite>
+    <sprites name="Game">
+      <sprites name="Bits">
+        <sprite>sprites\spr_bit1</sprite>
+        <sprite>sprites\spr_bit100</sprite>
+        <sprite>sprites\spr_bit1000</sprite>
+        <sprite>sprites\spr_bit5000</sprite>
+        <sprite>sprites\spr_bit10000</sprite>
       </sprites>
-      <sprites name="global">
-        <sprite>sprites\spr_BabyRage</sprite>
-        <sprite>sprites\spr_BegWan</sprite>
-        <sprite>sprites\spr_BibleThump</sprite>
-        <sprite>sprites\spr_BloodTrail</sprite>
-        <sprite>sprites\spr_cmonBruh</sprite>
-        <sprite>sprites\spr_copyThis</sprite>
-        <sprite>sprites\spr_CurseLit</sprite>
-        <sprite>sprites\spr_DansGame</sprite>
-        <sprite>sprites\spr_DarkMode</sprite>
-        <sprite>sprites\spr_FailFish</sprite>
-        <sprite>sprites\spr_GivePLZ</sprite>
-        <sprite>sprites\spr_HeyGuys</sprite>
-        <sprite>sprites\spr_imGlitch</sprite>
-        <sprite>sprites\spr_Kappa</sprite>
-        <sprite>sprites\spr_KappaPride</sprite>
-        <sprite>sprites\spr_Keepo</sprite>
-        <sprite>sprites\spr_Kreygasm</sprite>
-        <sprite>sprites\spr_LUL</sprite>
-        <sprite>sprites\spr_pastaThat</sprite>
-        <sprite>sprites\spr_PJSalt</sprite>
-        <sprite>sprites\spr_PogChamp</sprite>
+      <sprites name="Twitchmotes">
+        <sprites name="Dunpield">
+          <sprite>sprites\spr_dunpieOmg</sprite>
+          <sprite>sprites\spr_dunpieSif</sprite>
+          <sprite>sprites\spr_dunpieGsif</sprite>
+        </sprites>
+        <sprites name="global">
+          <sprite>sprites\spr_BabyRage</sprite>
+          <sprite>sprites\spr_BegWan</sprite>
+          <sprite>sprites\spr_BibleThump</sprite>
+          <sprite>sprites\spr_BloodTrail</sprite>
+          <sprite>sprites\spr_cmonBruh</sprite>
+          <sprite>sprites\spr_copyThis</sprite>
+          <sprite>sprites\spr_CurseLit</sprite>
+          <sprite>sprites\spr_DansGame</sprite>
+          <sprite>sprites\spr_DarkMode</sprite>
+          <sprite>sprites\spr_FailFish</sprite>
+          <sprite>sprites\spr_GivePLZ</sprite>
+          <sprite>sprites\spr_HeyGuys</sprite>
+          <sprite>sprites\spr_imGlitch</sprite>
+          <sprite>sprites\spr_Kappa</sprite>
+          <sprite>sprites\spr_KappaPride</sprite>
+          <sprite>sprites\spr_Keepo</sprite>
+          <sprite>sprites\spr_Kreygasm</sprite>
+          <sprite>sprites\spr_LUL</sprite>
+          <sprite>sprites\spr_pastaThat</sprite>
+          <sprite>sprites\spr_PJSalt</sprite>
+          <sprite>sprites\spr_PogChamp</sprite>
+        </sprites>
+        <sprites name="iFlynn">
+          <sprite>sprites\spr_iflynnFEELS</sprite>
+          <sprite>sprites\spr_iflynnGASM</sprite>
+          <sprite>sprites\spr_iflynnHI</sprite>
+          <sprite>sprites\spr_iflynnLOVE</sprite>
+          <sprite>sprites\spr_iflynnLUCK</sprite>
+          <sprite>sprites\spr_iflynnLUL</sprite>
+          <sprite>sprites\spr_iflynnLURK</sprite>
+        </sprites>
+        <sprites name="LadyZoe">
+          <sprite>sprites\spr_ladyz0Yes</sprite>
+        </sprites>
+        <sprites name="leijonaervasti">
+          <sprite>sprites\spr_leijonNook</sprite>
+          <sprite>sprites\spr_leijonPango</sprite>
+        </sprites>
+        <sprites name="N3BoySha">
+          <sprite>sprites\spr_n3boysHorns</sprite>
+          <sprite>sprites\spr_n3boysSup</sprite>
+        </sprites>
+        <sprites name="sasoriox">
+          <sprite>sprites\spr_sasori2Kappaccino</sprite>
+        </sprites>
+        <sprites name="Shul">
+          <sprite>sprites\spr_shulCry</sprite>
+          <sprite>sprites\spr_shulDab</sprite>
+          <sprite>sprites\spr_shulHey</sprite>
+          <sprite>sprites\spr_shulLewd</sprite>
+          <sprite>sprites\spr_shulLove</sprite>
+          <sprite>sprites\spr_shulLUL</sprite>
+          <sprite>sprites\spr_shulLurk</sprite>
+          <sprite>sprites\spr_shulRage</sprite>
+          <sprite>sprites\spr_shulS</sprite>
+          <sprite>sprites\spr_shulSalt</sprite>
+          <sprite>sprites\spr_shulThink</sprite>
+          <sprite>sprites\spr_shulUp</sprite>
+        </sprites>
+        <sprites name="SwissCheesy_ez">
+          <sprite>sprites\spr_swisscVoltLUL</sprite>
+        </sprites>
+        <sprites name="Tygastripe">
+          <sprite>sprites\spr_tygastHEY</sprite>
+        </sprites>
       </sprites>
-      <sprites name="iFlynn">
-        <sprite>sprites\spr_iflynnFEELS</sprite>
-        <sprite>sprites\spr_iflynnGASM</sprite>
-        <sprite>sprites\spr_iflynnHI</sprite>
-        <sprite>sprites\spr_iflynnLOVE</sprite>
-        <sprite>sprites\spr_iflynnLUCK</sprite>
-        <sprite>sprites\spr_iflynnLUL</sprite>
-        <sprite>sprites\spr_iflynnLURK</sprite>
+      <sprites name="Walls">
+        <sprite>sprites\spr_wall_01</sprite>
+        <sprite>sprites\spr_wall_02</sprite>
+        <sprite>sprites\spr_wall_03</sprite>
+        <sprite>sprites\spr_wall_04</sprite>
+        <sprite>sprites\spr_wall_05</sprite>
+        <sprite>sprites\spr_wall_06</sprite>
+        <sprite>sprites\spr_wall_07</sprite>
+        <sprite>sprites\spr_wall_08</sprite>
+        <sprite>sprites\spr_wall_09</sprite>
+        <sprite>sprites\spr_wall_10</sprite>
+        <sprite>sprites\spr_wall_11</sprite>
+        <sprite>sprites\spr_wall_12</sprite>
+        <sprite>sprites\spr_wall_13</sprite>
+        <sprite>sprites\spr_wall_14</sprite>
+        <sprite>sprites\spr_wall_15</sprite>
       </sprites>
-      <sprites name="LadyZoe">
-        <sprite>sprites\spr_ladyz0Yes</sprite>
-      </sprites>
-      <sprites name="leijonaervasti">
-        <sprite>sprites\spr_leijonNook</sprite>
-        <sprite>sprites\spr_leijonPango</sprite>
-      </sprites>
-      <sprites name="N3BoySha">
-        <sprite>sprites\spr_n3boysHorns</sprite>
-        <sprite>sprites\spr_n3boysSup</sprite>
-      </sprites>
-      <sprites name="sasoriox">
-        <sprite>sprites\spr_sasori2Kappaccino</sprite>
-      </sprites>
-      <sprites name="Shul">
-        <sprite>sprites\spr_shulCry</sprite>
-        <sprite>sprites\spr_shulDab</sprite>
-        <sprite>sprites\spr_shulHey</sprite>
-        <sprite>sprites\spr_shulLewd</sprite>
-        <sprite>sprites\spr_shulLove</sprite>
-        <sprite>sprites\spr_shulLUL</sprite>
-        <sprite>sprites\spr_shulLurk</sprite>
-        <sprite>sprites\spr_shulRage</sprite>
-        <sprite>sprites\spr_shulS</sprite>
-        <sprite>sprites\spr_shulSalt</sprite>
-        <sprite>sprites\spr_shulThink</sprite>
-        <sprite>sprites\spr_shulUp</sprite>
-      </sprites>
-      <sprites name="SwissCheesy_ez">
-        <sprite>sprites\spr_swisscVoltLUL</sprite>
-      </sprites>
-      <sprites name="Tygastripe">
-        <sprite>sprites\spr_tygastHEY</sprite>
-      </sprites>
+      <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_cursor</sprite>
+      <sprite>sprites\spr_cursorPressed</sprite>
+      <sprite>sprites\spr_emoteSpawn</sprite>
+      <sprite>sprites\spr_player</sprite>
     </sprites>
-    <sprite>sprites\spr_Player</sprite>
-    <sprite>sprites\spr_bullet</sprite>
-    <sprites name="Walls">
-      <sprite>sprites\spr_wall_01</sprite>
-      <sprite>sprites\spr_wall_02</sprite>
-      <sprite>sprites\spr_wall_03</sprite>
-      <sprite>sprites\spr_wall_04</sprite>
-      <sprite>sprites\spr_wall_05</sprite>
-      <sprite>sprites\spr_wall_06</sprite>
-      <sprite>sprites\spr_wall_07</sprite>
-      <sprite>sprites\spr_wall_08</sprite>
-      <sprite>sprites\spr_wall_09</sprite>
-      <sprite>sprites\spr_wall_10</sprite>
-      <sprite>sprites\spr_wall_11</sprite>
-      <sprite>sprites\spr_wall_12</sprite>
-      <sprite>sprites\spr_wall_13</sprite>
-      <sprite>sprites\spr_wall_14</sprite>
-      <sprite>sprites\spr_wall_15</sprite>
-    </sprites>
-    <sprite>sprites\spr_cursor</sprite>
-    <sprite>sprites\spr_cursorPressed</sprite>
-    <sprite>sprites\spr_emoteSpawn</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -128,25 +137,32 @@
     <font>fonts\fnt_score</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_player</object>
-    <object>objects\obj_playerSpawn</object>
-    <object>objects\obj_controller</object>
-    <object>objects\obj_bullet</object>
-    <objects name="enemies">
-      <object>objects\obj_enemy</object>
-      <object>objects\obj_enemy1</object>
-      <object>objects\obj_enemy2</object>
-      <object>objects\obj_enemy3</object>
-      <object>objects\obj_enemy4</object>
+    <objects name="Game">
+      <objects name="enemies">
+        <object>objects\obj_enemy</object>
+        <object>objects\obj_enemy1</object>
+        <object>objects\obj_enemy2</object>
+        <object>objects\obj_enemy3</object>
+        <object>objects\obj_enemy4</object>
+      </objects>
+      <object>objects\obj_bit</object>
+      <object>objects\obj_bullet</object>
+      <object>objects\obj_controller</object>
+      <object>objects\obj_emoteSpawn</object>
+      <object>objects\obj_obstacle</object>
+      <object>objects\obj_player</object>
+      <object>objects\obj_playerSpawn</object>
+      <object>objects\obj_wall</object>
     </objects>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_emoteSpawn</object>
-    <object>objects\obj_obstacle</object>
+    <objects name="Main menu">
+      <object>objects\obj_menuController</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
+    <room>rooms\rm_game</room>
+    <room>rooms\rm_menuMain</room>
   </rooms>
-  <constants number="17">
+  <constants number="18">
     <constant name="CELL_SIZE">32</constant>
     <constant name="WALL_CHANCE">20</constant>
     <constant name="AIR_CHANCE">100</constant>
@@ -158,12 +174,13 @@
     <constant name="SMOOTH_DESTROY">4</constant>
     <constant name="SMOOTH_CREATE">4</constant>
     <constant name="SMOOTH_RANGE">1</constant>
-    <constant name="CHEATS">false</constant>
-    <constant name="PATH_MAXROT">32</constant>
+    <constant name="CHEATS">true</constant>
+    <constant name="PATH_MAXROT">24</constant>
     <constant name="PATH_ROTSTEP">8</constant>
     <constant name="PATH_AHEAD">10</constant>
     <constant name="PATH_ONSPOT">true</constant>
-    <constant name="VERSION">"V0.1.1"</constant>
+    <constant name="VERSION">"V0.1.2snap1"</constant>
+    <constant name="MAX_ENEMY">50</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
