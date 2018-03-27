@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_pistol</sound>
+    <sound>sound\snd_twitchvasionShout</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Game">
@@ -134,6 +135,7 @@
       <script>scripts\scr_ini_save.gml</script>
       <script>scripts\scr_ini_load.gml</script>
     </scripts>
+    <script>scripts\instance_nearest_notme.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_score</font>
@@ -161,13 +163,14 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_game</room>
     <room>rooms\rm_menuMain</room>
+    <room>rooms\rm_game</room>
   </rooms>
-  <constants number="20">
+  <constants number="21">
     <constant name="AIR_CHANCE">100</constant>
     <constant name="BIT_GRAVITY">2</constant>
-    <constant name="BIT_RADIUS">100</constant>
+    <constant name="BIT_MAGNET">100</constant>
+    <constant name="BIT_RADIUS">200</constant>
     <constant name="CELL_SIZE">32</constant>
     <constant name="CHEATS">false</constant>
     <constant name="GRID_FILL">34</constant>

@@ -121,15 +121,16 @@ if(speed &gt; 1)
 if(instance_exists(obj_player))
 {
     var player = instance_nearest(x, y, obj_player);
-    if(point_distance(x, y, player.x, player.y) &lt;= BIT_RADIUS)
+    if(point_distance(x, y, player.x, player.y) &lt;= BIT_MAGNET)
     {
-        gravity = BIT_GRAVITY;
+        gravity = BIT_GRAVITY / (1 + worth / 2000);
         gravity_direction = point_direction(x, y, player.x, player.y);
     }
     else
     {
-        var bit = instance_nearest(x, y, obj_bit)
-        if(self != bit &amp;&amp; point_distance(x, y, bit.x, bit.y) &lt; BIT_RADIUS)
+        var bit = instance_nearest_notme(x, y, obj_bit);
+        if(bit != noone &amp;&amp;
+             point_distance(x, y, bit.x, bit.y) &lt; BIT_RADIUS)
         {
             gravity = BIT_GRAVITY;
             gravity_direction = point_direction(x, y, bit.x, bit.y);
@@ -205,6 +206,7 @@ if(other.combining == false &amp;&amp; self.combining == true)
     vspeed = (self.vspeed * self.worth +
               other.vspeed * other.worth) /
              (self.worth + other.worth);
+    speed  = 1;
     instance_destroy(other);
     combining = false;
 }
