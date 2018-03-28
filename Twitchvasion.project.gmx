@@ -141,6 +141,9 @@
     <font>fonts\fnt_score</font>
   </fonts>
   <objects name="objects">
+    <objects name="Credits">
+      <object>objects\obj_creditsController</object>
+    </objects>
     <objects name="Game">
       <objects name="enemies">
         <object>objects\obj_enemy</object>
@@ -151,7 +154,7 @@
       </objects>
       <object>objects\obj_bit</object>
       <object>objects\obj_bullet</object>
-      <object>objects\obj_controller</object>
+      <object>objects\obj_gameController</object>
       <object>objects\obj_emoteSpawn</object>
       <object>objects\obj_obstacle</object>
       <object>objects\obj_player</object>
@@ -160,13 +163,17 @@
     </objects>
     <objects name="Main menu">
       <object>objects\obj_menuController</object>
+      <object>objects\obj_playOfflineButton</object>
+      <object>objects\obj_quitButton</object>
     </objects>
+    <object>objects\obj_controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menuMain</room>
     <room>rooms\rm_game</room>
+    <room>rooms\rm_credits</room>
   </rooms>
-  <constants number="21">
+  <constants number="25">
     <constant name="AIR_CHANCE">100</constant>
     <constant name="BIT_GRAVITY">2</constant>
     <constant name="BIT_MAGNET">100</constant>
@@ -185,7 +192,11 @@
     <constant name="SMOOTH_DESTROY">4</constant>
     <constant name="SMOOTH_RANGE">1</constant>
     <constant name="SPAWN_CHANCE">0.2</constant>
-    <constant name="VERSION">"V0.1.2snap2"</constant>
+    <constant name="T1W">4</constant>
+    <constant name="T2W">3</constant>
+    <constant name="T3W">2</constant>
+    <constant name="T4W">1</constant>
+    <constant name="VERSION">"V0.1.2snap"</constant>
     <constant name="VOID">-7</constant>
     <constant name="WALL_CHANCE">20</constant>
   </constants>
