@@ -17,7 +17,7 @@
     <option_android_arch_mipsr2sf>false</option_android_arch_mipsr2sf>
     <option_android_arch_x86>True</option_android_arch_x86>
     <option_android_build_tools_version>23.0.1</option_android_build_tools_version>
-    <option_android_build_version>1</option_android_build_version>
+    <option_android_build_version>2</option_android_build_version>
     <option_android_color_depth>0</option_android_color_depth>
     <option_android_compile_sdk_version>23</option_android_compile_sdk_version>
     <option_android_display_name>Twitchvasion</option_android_display_name>
@@ -203,7 +203,8 @@
     <option_androidtv_texture_page>1024</option_androidtv_texture_page>
     <option_androidtv_use_test_ads>false</option_androidtv_use_test_ads>
     <option_argumenterrors>True</option_argumenterrors>
-    <option_audioGroupCount>1</option_audioGroupCount>
+    <option_audioGroup1_targets>9223372036854775807</option_audioGroup1_targets>
+    <option_audioGroupCount>2</option_audioGroupCount>
     <option_author>Jorden "Den_drummer" Laureyssens</option_author>
     <option_backimage>nil</option_backimage>
     <option_borderless>False</option_borderless>
@@ -269,7 +270,7 @@
     <option_ios_advertising_key></option_ios_advertising_key>
     <option_ios_advertising_type>iAds</option_ios_advertising_type>
     <option_ios_app_id></option_ios_app_id>
-    <option_ios_build_version>1</option_ios_build_version>
+    <option_ios_build_version>2</option_ios_build_version>
     <option_ios_certificate>&lt; Press refresh to fetch certificate list from Mac&gt;</option_ios_certificate>
     <option_ios_device_type>3</option_ios_device_type>
     <option_ios_display_name>Twitchvasion</option_ios_display_name>
@@ -367,7 +368,7 @@
     <option_linux_steam_app_id>0</option_linux_steam_app_id>
     <option_linux_sync>-1</option_linux_sync>
     <option_linux_texture_page>2048</option_linux_texture_page>
-    <option_linux_version_build>1</option_linux_version_build>
+    <option_linux_version_build>2</option_linux_version_build>
     <option_linux_version_major>0</option_linux_version_major>
     <option_linux_version_minor>1</option_linux_version_minor>
     <option_loadalpha>255</option_loadalpha>
@@ -377,7 +378,7 @@
     <option_mac_app_id></option_mac_app_id>
     <option_mac_appstore_incoming_allow>0</option_mac_appstore_incoming_allow>
     <option_mac_appstore_outgoing_allow>0</option_mac_appstore_outgoing_allow>
-    <option_mac_build_version>1</option_mac_build_version>
+    <option_mac_build_version>2</option_mac_build_version>
     <option_mac_copyright_info></option_mac_copyright_info>
     <option_mac_create_app_store>0</option_mac_create_app_store>
     <option_mac_display_name>Twitchvasion</option_mac_display_name>
@@ -460,8 +461,62 @@
     <option_textureGroup0_parent>&lt;none&gt;</option_textureGroup0_parent>
     <option_textureGroup0_scaled>0</option_textureGroup0_scaled>
     <option_textureGroup0_targets>9223372036854775807</option_textureGroup0_targets>
-    <option_textureGroup_count>1</option_textureGroup_count>
+    <option_textureGroup1_border>2</option_textureGroup1_border>
+    <option_textureGroup1_nocropping>0</option_textureGroup1_nocropping>
+    <option_textureGroup1_parent>Default</option_textureGroup1_parent>
+    <option_textureGroup1_scaled>0</option_textureGroup1_scaled>
+    <option_textureGroup1_targets>9223372036854775807</option_textureGroup1_targets>
+    <option_textureGroup2_border>2</option_textureGroup2_border>
+    <option_textureGroup2_nocropping>0</option_textureGroup2_nocropping>
+    <option_textureGroup2_parent>Default</option_textureGroup2_parent>
+    <option_textureGroup2_scaled>0</option_textureGroup2_scaled>
+    <option_textureGroup2_targets>9223372036854775807</option_textureGroup2_targets>
+    <option_textureGroup3_border>2</option_textureGroup3_border>
+    <option_textureGroup3_nocropping>0</option_textureGroup3_nocropping>
+    <option_textureGroup3_parent>Emojis</option_textureGroup3_parent>
+    <option_textureGroup3_scaled>0</option_textureGroup3_scaled>
+    <option_textureGroup3_targets>9223372036854775807</option_textureGroup3_targets>
+    <option_textureGroup4_border>2</option_textureGroup4_border>
+    <option_textureGroup4_nocropping>0</option_textureGroup4_nocropping>
+    <option_textureGroup4_parent>Emojis</option_textureGroup4_parent>
+    <option_textureGroup4_scaled>0</option_textureGroup4_scaled>
+    <option_textureGroup4_targets>9223372036854775807</option_textureGroup4_targets>
+    <option_textureGroup5_border>2</option_textureGroup5_border>
+    <option_textureGroup5_nocropping>0</option_textureGroup5_nocropping>
+    <option_textureGroup5_parent>Emojis</option_textureGroup5_parent>
+    <option_textureGroup5_scaled>0</option_textureGroup5_scaled>
+    <option_textureGroup5_targets>9223372036854775807</option_textureGroup5_targets>
+    <option_textureGroup6_border>2</option_textureGroup6_border>
+    <option_textureGroup6_nocropping>0</option_textureGroup6_nocropping>
+    <option_textureGroup6_parent>Emojis</option_textureGroup6_parent>
+    <option_textureGroup6_scaled>0</option_textureGroup6_scaled>
+    <option_textureGroup6_targets>9223372036854775807</option_textureGroup6_targets>
+    <option_textureGroup7_border>2</option_textureGroup7_border>
+    <option_textureGroup7_nocropping>0</option_textureGroup7_nocropping>
+    <option_textureGroup7_parent>Default</option_textureGroup7_parent>
+    <option_textureGroup7_scaled>0</option_textureGroup7_scaled>
+    <option_textureGroup7_targets>9223372036854775807</option_textureGroup7_targets>
+    <option_textureGroup8_border>2</option_textureGroup8_border>
+    <option_textureGroup8_nocropping>0</option_textureGroup8_nocropping>
+    <option_textureGroup8_parent>Default</option_textureGroup8_parent>
+    <option_textureGroup8_scaled>0</option_textureGroup8_scaled>
+    <option_textureGroup8_targets>9223372036854775807</option_textureGroup8_targets>
+    <option_textureGroup9_border>2</option_textureGroup9_border>
+    <option_textureGroup9_nocropping>0</option_textureGroup9_nocropping>
+    <option_textureGroup9_parent>Default</option_textureGroup9_parent>
+    <option_textureGroup9_scaled>0</option_textureGroup9_scaled>
+    <option_textureGroup9_targets>9223372036854775807</option_textureGroup9_targets>
+    <option_textureGroup_count>10</option_textureGroup_count>
     <option_textureGroups0>Default</option_textureGroups0>
+    <option_textureGroups1>Fonts</option_textureGroups1>
+    <option_textureGroups2>Bits</option_textureGroups2>
+    <option_textureGroups3>T1Emojis</option_textureGroups3>
+    <option_textureGroups4>T2Emojis</option_textureGroups4>
+    <option_textureGroups5>T3Emojis</option_textureGroups5>
+    <option_textureGroups6>T4Emojis</option_textureGroups6>
+    <option_textureGroups7>Walls</option_textureGroups7>
+    <option_textureGroups8>Cursor</option_textureGroups8>
+    <option_textureGroups9>Emojis</option_textureGroups9>
     <option_tizen_app_id>http://yourdomain/Twitch_Emote_Invasion</option_tizen_app_id>
     <option_tizen_build_version>0</option_tizen_build_version>
     <option_tizen_display_name>Twitch Emote Invasion</option_tizen_display_name>
@@ -497,7 +552,7 @@
     <option_use_fast_collision>False</option_use_fast_collision>
     <option_use_new_audio>True</option_use_new_audio>
     <option_variableerrors>False</option_variableerrors>
-    <option_version>V0.1.1</option_version>
+    <option_version>V0.1.2</option_version>
     <option_version_build>0</option_version_build>
     <option_version_company></option_version_company>
     <option_version_copyright></option_version_copyright>
@@ -505,7 +560,7 @@
     <option_version_major>0</option_version_major>
     <option_version_minor>1</option_version_minor>
     <option_version_product></option_version_product>
-    <option_version_release>1</option_version_release>
+    <option_version_release>2</option_version_release>
     <option_win8_advertising_appid></option_win8_advertising_appid>
     <option_win8_advertising_enable>0</option_win8_advertising_enable>
     <option_win8_advertising_key></option_win8_advertising_key>
@@ -513,7 +568,7 @@
     <option_win8_advertising_type>MS Advertising</option_win8_advertising_type>
     <option_win8_analytics_enable>0</option_win8_analytics_enable>
     <option_win8_analytics_id></option_win8_analytics_id>
-    <option_win8_build_version>1</option_win8_build_version>
+    <option_win8_build_version>2</option_win8_build_version>
     <option_win8_certificate_location>Windows8_TemporaryKey.pfx</option_win8_certificate_location>
     <option_win8_display_name>Twitchmote Invasion</option_win8_display_name>
     <option_win8_internet_capable>0</option_win8_internet_capable>
@@ -544,7 +599,7 @@
     <option_win8_texture_page>1024</option_win8_texture_page>
     <option_win8_wide_logo>Configs\Default\Windows8\logos\logo310.png</option_win8_wide_logo>
     <option_winUAP_allowfullscreen>0</option_winUAP_allowfullscreen>
-    <option_winUAP_build_version>1</option_winUAP_build_version>
+    <option_winUAP_build_version>2</option_winUAP_build_version>
     <option_winUAP_certificate_location>WinUWPRunner_TemporaryKey.pfx</option_winUAP_certificate_location>
     <option_winUAP_display_name>Twitchvasion</option_winUAP_display_name>
     <option_winUAP_fullscreen>-1</option_winUAP_fullscreen>
@@ -590,7 +645,7 @@
     <option_windows_major_version>0</option_windows_major_version>
     <option_windows_nsis_file>Configs\Default\windows\RunnerInstaller.nsi</option_windows_nsis_file>
     <option_windows_product_info></option_windows_product_info>
-    <option_windows_release_version>1</option_windows_release_version>
+    <option_windows_release_version>2</option_windows_release_version>
     <option_windows_runner_finished>Configs\Default\windows\Runner_finish.bmp</option_windows_runner_finished>
     <option_windows_runner_header>Configs\Default\windows\Runner_header.bmp</option_windows_runner_header>
     <option_windows_save_location>0</option_windows_save_location>

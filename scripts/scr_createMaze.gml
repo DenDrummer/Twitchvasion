@@ -1,7 +1,7 @@
 ///scr_createMaze()
 randomize();
 w = (room_width div CELL_SIZE);
-h = (room_height div CELL_SIZE) + 1;
+h = (room_height div CELL_SIZE);
 
 global.grid = ds_grid_create(w, h);
 

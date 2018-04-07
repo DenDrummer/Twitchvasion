@@ -5,7 +5,7 @@
   <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_obstacle</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -192,7 +192,12 @@ h -= 1;
 if(h &lt;=0)
 {
     instance_destroy(self);
-    score += maxHealth;
+    with(instance_create(x, y, obj_bit))
+    {
+        worth = other.maxHealth;
+        direction = other.direction;
+        speed = clamp(other.speed, 1, 20);
+    }
 }
 else
 {
