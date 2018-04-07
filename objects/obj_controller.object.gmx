@@ -79,31 +79,6 @@ scr_ini_save();
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///destroy lists
-ds_list_destroy(global.T1);
-ds_list_destroy(global.T2);
-ds_list_destroy(global.T3);
-ds_list_destroy(global.T4);
-</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="7" enumb="2">
       <action>
@@ -146,31 +121,6 @@ scr_ini_load();
             <kind>1</kind>
             <string>///set cursor sprite
 cursor_sprite = spr_cursor;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///create emote lists
-scr_tier1();
-scr_tier2();
-scr_tier3();
-scr_tier4();
 </string>
           </argument>
         </arguments>

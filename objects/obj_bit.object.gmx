@@ -32,6 +32,29 @@ combining = false;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//set image scale
+image_xscale = 1/4;
+image_yscale = 1/4;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -237,17 +260,21 @@ else if(other.combining == false)
           <argument>
             <kind>1</kind>
             <string>///choose bit image based on worth
-if(worth &gt;= 10000)
+if(worth &gt;= 100000)
 {
-    sprite_index = spr_bit10000;
+    sprite_index = spr_bit100k;
+}
+else if(worth &gt;= 10000)
+{
+    sprite_index = spr_bit10k;
 }
 else if(worth &gt;= 5000)
 {
-    sprite_index = spr_bit5000;
+    sprite_index = spr_bit5k;
 }
 else if(worth &gt;= 1000)
 {
-    sprite_index = spr_bit1000;
+    sprite_index = spr_bit1k;
 }
 else if(worth &gt;= 100)
 {

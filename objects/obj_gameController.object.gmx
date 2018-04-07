@@ -346,7 +346,7 @@ scr_createMaze();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Reset player location
+            <string>///Reset player location &amp; score
 if(instance_exists(obj_playerSpawn))
 {
     var inst = instance_find(obj_playerSpawn, floor(random(instance_number(obj_playerSpawn))));
@@ -358,6 +358,7 @@ else
     player.x = room_width / 2;
     player.y = room_height / 2;
 }
+score = 0;
 </string>
           </argument>
         </arguments>

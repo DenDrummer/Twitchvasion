@@ -10,9 +10,28 @@
   <persistent>0</persistent>
   <colour>16777215</colour>
   <showcolour>-1</showcolour>
-  <code>if(!instance_exists(obj_controller))
+  <code>//if the controller doesn't exist yet
+//aka if it's the first time launching the game
+if(!instance_exists(obj_controller))
 {
+    //create the controller
     instance_create(0, 0, obj_controller);
+    
+    //load INI file
+    scr_ini_load();
+    
+    //set cursor sprite
+    cursor_sprite = spr_cursor;
+    
+    //create global variables if they don't exist yet
+    if(!variable_global_exists("highScore"))
+    {
+        global.highScore = 0;
+    }
+    if(!variable_global_exists("bits"))
+    {
+        global.bits = 0;
+    }
 }</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
