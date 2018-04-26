@@ -168,6 +168,7 @@
       <object>objects\obj_quitButton</object>
     </objects>
     <object>objects\obj_controller</object>
+    <object>objects\obj_cursor</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menuMain</room>
@@ -197,7 +198,7 @@
     <constant name="T2W">3</constant>
     <constant name="T3W">2</constant>
     <constant name="T4W">1</constant>
-    <constant name="VERSION">"V0.1.2snap"</constant>
+    <constant name="VERSION">"V0.1.3snap"</constant>
     <constant name="VOID">-7</constant>
     <constant name="WALL_CHANCE">20</constant>
   </constants>
