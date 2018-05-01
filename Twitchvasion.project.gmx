@@ -176,6 +176,7 @@
       <object>objects\obj_wall</object>
     </objects>
     <objects name="Main menu">
+      <object>objects\obj_creditsButton</object>
       <object>objects\obj_menuController</object>
       <object>objects\obj_playOfflineButton</object>
       <object>objects\obj_quitButton</object>
