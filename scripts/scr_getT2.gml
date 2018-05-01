@@ -17,19 +17,6 @@ return choose(//Dunpield
               spr_n3boysHorns,
               //sasoriox
               spr_sasori2Kappaccino,
-              //Shul
-              spr_shulCry,
-              spr_shulDab,
-              spr_shulHey,
-              spr_shulLewd,
-              spr_shulLove,
-              spr_shulLUL,
-              spr_shulLurk,
-              spr_shulRage,
-              spr_shulS,
-              spr_shulSalt,
-              spr_shulThink,
-              spr_shulUp,
               //SwissCheesy_ez
               spr_swisscVoltLUL,
               //Tygastripe

@@ -82,20 +82,6 @@
           <sprites name="sasoriox">
             <sprite>sprites\spr_sasori2Kappaccino</sprite>
           </sprites>
-          <sprites name="Shul">
-            <sprite>sprites\spr_shulCry</sprite>
-            <sprite>sprites\spr_shulDab</sprite>
-            <sprite>sprites\spr_shulHey</sprite>
-            <sprite>sprites\spr_shulLewd</sprite>
-            <sprite>sprites\spr_shulLove</sprite>
-            <sprite>sprites\spr_shulLUL</sprite>
-            <sprite>sprites\spr_shulLurk</sprite>
-            <sprite>sprites\spr_shulRage</sprite>
-            <sprite>sprites\spr_shulS</sprite>
-            <sprite>sprites\spr_shulSalt</sprite>
-            <sprite>sprites\spr_shulThink</sprite>
-            <sprite>sprites\spr_shulUp</sprite>
-          </sprites>
           <sprites name="SwissCheesy_ez">
             <sprite>sprites\spr_swisscVoltLUL</sprite>
           </sprites>
